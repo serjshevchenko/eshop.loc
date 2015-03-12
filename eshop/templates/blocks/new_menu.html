@@ -1,0 +1,9 @@
+<div class="icon-bar six-up menu-top">
+    <span class="item"></span>
+    {% for item in current_menu.children %}
+        <a href="{{ item.url}}" class="item {% if item.active %}active{% endif %}">
+            <span class="icon-mail"></span>
+            <label>{{ item.text }}</label>
+        </a>
+    {% endfor %}
+</div>

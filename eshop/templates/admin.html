@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block js %}
+   <script data-main="admin" src="/static/js/vendor/require.js" type="text/javascript"></script>
+{% endblock %}
+
+{% block content %}
+
+{% if navigation_bar %}
+    <ul class="accordion" data-accordion>
+        {% for item in navigation_bar if item['administered'] %}
+            {% set panel_id = 'panel' + item['endpoint'] %}
+            <li class="accordion-navigation">
+                <a href="#{{ panel_id }}">{{ item['caption'] }}</a>
+                <div id="{{ panel_id }}" class="content">
+                    <p>Content for page {{ item['caption'] }} from DB<br /><b>TODO !!!!</b></p>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,33 @@
+[
+  {
+    "endpoint": "home",
+    "caption": "Home",
+    "icon": "icon-home",
+    "administered": true,
+    "public": true
+  }, {
+    "endpoint": "news",
+    "caption": "News",
+    "icon": "icon-newspaper",
+    "administered": true,
+    "public": true
+  }, {
+    "endpoint": "about",
+    "caption": "About",
+    "icon": "icon-info-circled",
+    "administered": true,
+    "public": true
+}, {
+    "endpoint": "contact",
+    "caption": "Contact",
+    "icon": "icon-mail",
+    "administered": true,
+    "public": true
+  }, {
+    "endpoint": "admin",
+    "caption": "Administration",
+    "icon": "icon-edit",
+    "administered": false,
+    "public": false
+  }
+]
