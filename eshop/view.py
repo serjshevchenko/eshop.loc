@@ -4,8 +4,10 @@ from eshop import app, menu
 
 
 @app.route('/')
-@menu.register_menu(app, '.', 'Home',
-                    active_when=lambda: request.endpoint == 'home', order=0)
+@menu.register_menu(app, '.home', 'Home',
+                    active_when=lambda: request.endpoint == 'home',
+                    dynamic_list_constructor=lambda: dict(icon='icon-home'),
+                    order=0)
 def home():
     template_vars = {
     }
@@ -20,7 +22,9 @@ def home():
 @app.route('/news', defaults={'page': 1})
 @app.route('/news/<page>')
 @menu.register_menu(app, '.news', 'News',
-                    active_when=lambda: request.endpoint == 'news', order=1)
+                    active_when=lambda: request.endpoint == 'news',
+                    dynamic_list_constructor=lambda: dict(icon='icon-newspaper'),
+                    order=1)
 def news(page):
     template_vars = {
         'page': page
@@ -31,7 +35,9 @@ def news(page):
 
 @app.route('/about')
 @menu.register_menu(app, '.about', 'About',
-                    active_when=lambda: request.endpoint == 'about', order=2)
+                    active_when=lambda: request.endpoint == 'about',
+                    dynamic_list_constructor=lambda: dict(icon='icon-info-circled'),
+                    order=2)
 def about():
     template_vars = {
     }
@@ -40,7 +46,9 @@ def about():
 
 @app.route('/contact')
 @menu.register_menu(app, '.contact', 'Contact',
-                    active_when=lambda: request.endpoint == 'contact', order=3)
+                    active_when=lambda: request.endpoint == 'contact',
+                    dynamic_list_constructor=lambda: dict(icon='icon-mail'),
+                    order=3)
 def contact():
     template_vars = {
     }
@@ -54,7 +62,9 @@ def user():
 
 @app.route('/administration')
 @menu.register_menu(app, '.admin', 'Administration',
-                    active_when=lambda: request.endpoint == 'admin', order=4)
+                    active_when=lambda: request.endpoint == 'admin',
+                    dynamic_list_constructor=lambda: dict(icon='icon-edit'),
+                    order=4)
 def admin():
     # navigation_bar
     return render_template('admin.html')

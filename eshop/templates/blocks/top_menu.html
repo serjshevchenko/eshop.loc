@@ -1,17 +1,9 @@
-{% if navigation_bar %}
-    <div class="icon-bar six-up menu-top">
-        <span class="item"></span>
-        {% for item in navigation_bar %}
-            <a href="{{ url_for(item['endpoint']) }}" class="item {% if request.endpoint == item['endpoint'] %}active{% endif %}">
-                <span class="{{ item['icon'] }}"></span>
-                <label>
-                    {% if item['caption'] %}
-                        {{ item['caption'] }}
-                    {% else %}
-                        {{ item['endpoint']|capitalize }}
-                    {% endif %}
-                </label>
-            </a>
-        {% endfor %}
-    </div>
-{% endif %}
+<div class="icon-bar six-up menu-top">
+    <span class="item"></span>
+    {% for item in current_menu.children %}
+        <a href="{{ item.url}}" class="item {% if item.active %}active{% endif %}">
+            <span class="{{ item.dynamic_list.icon }}"></span>
+            <label>{{ item.text }}</label>
+        </a>
+    {% endfor %}
+</div>
