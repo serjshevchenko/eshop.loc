@@ -6,7 +6,13 @@
 
 3. make section with dev and prod in config.py (class)
 
-4. change app like in (blueprint)
++4. change app like in (blueprint)
 https://www.digitalocean.com/community/tutorials/how-to-structure-large-flask-applications
 
-5. check it out Blueprint & subdomain
++5. check it out Blueprint & subdomain
+
+6. make auth
+
+7. refactor get_content func.
+
+8. make thumbnail
