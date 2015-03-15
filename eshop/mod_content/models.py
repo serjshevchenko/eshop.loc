@@ -8,3 +8,7 @@ class Content(db.Model):
 
     def __repr__(self):
         return '<Content by ling %s>' % self.ur
+
+
+def get_content(url):
+    return Content.query.filter_by(url=url).first_or_404().text

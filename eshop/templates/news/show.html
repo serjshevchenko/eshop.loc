@@ -6,6 +6,9 @@
 
 {% block content %}
     <div class="page-news">
-        <h1>News show</h1>
+        <h1>{{ item.name }}</h1>
+
+        <div class="text">{{ item.text|safe }}</div>
+
     </div>
 {% endblock %}

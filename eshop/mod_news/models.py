@@ -1,5 +1,5 @@
 from eshop import db
-
+from flask import url_for
 
 class News(db.Model):
     id = db.Column(db.Integer, primary_key=True, nullable=False)
@@ -8,3 +8,14 @@ class News(db.Model):
 
     def __repr__(self):
         return '<News %s>' % self.name
+
+
+def get_list(page=1):
+    news = News.query.all()
+    for item in news:
+        setattr(item, 'url', url_for('.show', name=item.name, id=item.id))
+    return news
+
+
+def get_show(id):
+    return News.query.filter_by(id=id).first_or_404()
