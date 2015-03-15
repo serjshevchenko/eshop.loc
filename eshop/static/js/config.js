@@ -1,5 +1,5 @@
 var require = {
-            baseUrl: 'static/js',
+            baseUrl: '/static/js',
             paths: {
                 'jquery': 'vendor/jquery',
                 'jqueryTE': 'vendor/jquery-te-1.4.0.min',
@@ -8,6 +8,7 @@ var require = {
                 //'foundationAbide': 'foundation/foundation.abide',
                 //'foundationAlert': 'foundation/foundation.alert',
                 //'foundationReveal': 'foundation/foundation.reveal',
+
 
                 //pages
                 'home': 'pages/home',

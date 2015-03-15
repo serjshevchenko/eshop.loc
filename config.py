@@ -12,3 +12,6 @@ DB_HOST = 'localhost'
 DB_PORT = '5432'
 DB_USERNAME = 'eshop'
 DB_PASSWORD = 'admin'
+
+SQLALCHEMY_DATABASE_URI = 'postgresql://%s:%s@%s:%s/%s' % \
+                          (DB_USERNAME, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME)

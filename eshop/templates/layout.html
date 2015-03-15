@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>Flaskr</title>
+    <title>Eshop</title>
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/normalize.css') }}">
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/foundation.css') }}">
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/fontello.css') }}">
@@ -13,7 +13,7 @@
 <body>
     <header class="">
         <div class="logo">
-            <a href="{{ url_for('home') }}"></a>
+            <a href="{{ url_for('content.home') }}"></a>
         </div>
         {% include 'blocks/top_menu.html' %}
     </header>

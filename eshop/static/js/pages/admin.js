@@ -1,10 +1,5 @@
-define(['jquery', 'jqueryTE', 'foundationAccordion'], function() {
-    //$('#about-page-content').jqte();
-    var foundation_options = {
-        accordion: {
-            multi_expand: true
-        }
-    };
-    $(document).foundation(foundation_options);
+define(['jqueryTE'], function() {
+    $('.textarea-jqte').jqte();
     return {};
-});
+}, function(err){console.log('err:'+err);});
+if (requirejs) requirejs.onerror = function(){};
